@@ -1,0 +1,231 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#header {
+	background: url('../images/radiobkg3.jpg')100%;
+	background-size: cover;
+	height: 200px;
+	opacity: 0.6;
+	border-bottom: solid 5px white;
+}
+
+h1 {
+	margin-top: 50px;
+	text-align: left;
+	font-size: 40px;
+	margin-left: 50px;
+	position: absolute;
+	opacity: 1;
+	z-index: 10;
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+}
+
+#container {
+	height: 700px;
+	border: solid black;
+	background: url('../images/radiobkg.jpg')100%;
+	background-size: cover;
+	/* opacity: 0.8; */
+}
+
+#radio-container {
+	background: rgb(13, 11, 10);
+	margin: auto;
+	width: 800px;
+	height: 400px;
+	margin-top: 40px;
+	position: relative; /* Has to be in front of falling notes so it can be clickable */
+	display: flex;
+	flex-direction: column;
+	border: solid 5px white;
+}
+
+.radio-header {
+	border-bottom: solid 5px white;
+	height: 100px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.buttons {
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+	margin-top: 10px;
+	border: solid white;
+	display: flex;
+	justify-content: center;
+}
+
+.buttons:hover {
+	cursor: pointer;
+}
+
+#next i {
+	border: solid white;
+	border-radius: 50%;
+	border-width: 6px;
+	margin: 1px 0 1px 0;
+	padding: 10px 11px 0px 11px;
+	font-weight: bold;
+	font-size: 39px;
+}
+
+.far {
+	font-size: 70px;
+	/* padding: 15px; */
+	cursor: pointer;
+	color: white;
+}
+
+#play {
+	display: none;
+}
+
+#text-holder {
+	border-radius: 20%;
+	width: 500px;
+	margin-top: 10px;
+	height: 70px;
+	border: solid white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 24px;
+	font-family: 'Press Start 2P', cursive;
+	position: relative;
+	overflow: hidden;
+}
+
+#song {
+	width: 250%;
+	position: absolute;
+	padding: 25px;
+	animation: songScroll 17s infinite;
+}
+
+@keyframes songScroll {
+	0% {
+		left: 100%;
+	}
+	100% {
+		left: -210%;
+	}
+}
+
+#radio-body {
+	height: 300px;
+	display: flex;
+	justify-content: space-around;
+}
+
+.speakers {
+ width: 250px;
+ height: 250px;
+ border-radius: 50%;
+ margin-top: 20px;
+ border: solid white;
+ display: flex;
+ justify-content: center;
+}
+
+#volume-buttons {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.fas {
+	cursor: pointer;
+	color: white;
+	font-size: 100px;
+	/* margin-top: 30px; */
+}
+
+.fa-music {
+	margin-top: 70px;
+}
+        /* Animation */
+.music-notes {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+	overflow: hidden;
+}
+.music-notes div {
+  position: absolute;
+  display: block;
+}
+.music-notes div:nth-child(1) {
+  left: 0%;
+  animation: fallingNotes 25s linear;
+  animation-delay: -5s;
+}
+.music-notes div:nth-child(2) {
+  left: 15%;
+  animation: fallingNotes 20s linear;
+    animation-delay: -8s;
+    color: lightcoral;
+}
+.music-notes div:nth-child(3) {
+  left: 30%;
+  animation: fallingNotes 18s linear;
+      animation-delay: -2s;
+}
+.music-notes div:nth-child(4) {
+  left: 45%;
+  animation: fallingNotes 23s linear;
+  animation-delay: -3s;
+}
+.music-notes div:nth-child(5) {
+  left: 60%;
+  animation: fallingNotes 16s linear;
+  animation-delay: -9s;
+}
+.music-notes div:nth-child(6) {
+  left: 75%;
+  animation: fallingNotes 19s linear;
+  animation-delay: -13s;
+}
+.music-notes div:nth-child(7) {
+  left: 90%;
+  animation: fallingNotes 24s linear;
+  animation-delay: -5s;
+}
+.round2 {
+	transform: translateY(-300px) scale(0.7) rotateY(180deg);
+	filter: blur(0.5px);
+}
+
+@keyframes fallingNotes {
+  0% {
+    opacity: 0;
+    top: -10%;
+    transform: translateX(30px) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(-10px) rotate(45deg);
+  }
+  40% {
+    transform: translateX(0px) rotate(90deg);
+  }
+  60% {
+    transform: translateX(40px) rotate(140deg);
+  }
+  80% {
+    transform: translateX(-10px) rotate(190deg);
+  }
+  100% {
+    top: 120%;
+    transform: translateX(10px) rotate(230deg);
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Radio</title>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header id="header">
+		<h1> Your Radio Station </h1>
+	</header>
+<div id="container">
+<!-- Animation Falling music-notes-->
+	<div class="music-notes">
+		<div><img src="images/note3.png" width="130px" height="130px"></div>
+		<div><img src="images/note4.png" width="140px" height="140px"></div>
+		<div><img src="images/note5.png" width="150px" height="150px"></div>
+		<div><img src="images/note6.png" width="140px" height="140px"></div>
+		<div><img src="images/note7.png" width="130px" height="130px"></div>
+		<div><img src="images/note8.png" width="140px" height="140px"></div>
+		<div><img src="images/note9.png" width="140px" height="140px"></div>
+	</div>
+
+	<div class="music-notes round2">
+		<div><img src="images/note3.png" width="130px" height="130px"></div>
+		<div><img src="images/note4.png" width="140px" height="140px"></div>
+		<div><img src="images/note5.png" width="150px" height="150px"></div>
+		<div><img src="images/note6.png" width="140px" height="140px"></div>
+		<div><img src="images/note7.png" width="130px" height="130px"></div>
+		<div><img src="images/note8.png" width="140px" height="140px"></div>
+		<div><img src="images/note9.png" width="140px" height="140px"></div>
+	</div>
+
+		<div id="radio-container">
+			<!-- Chrome audio tag autoplay does not work unless I use an iframe with a silent mp3 file playing -->
+			<iframe src="audio/silence.mp3" allow="autoplay" style="display:none"></iframe>
+
+			<!-- Set attribute src and link wth js to play song -->
+			<audio autoplay id="audio"></audio>
+
+
+			<div class="radio-header">
+				<div class="buttons playpause" id="pause" onclick="document.getElementById('audio').pause()">
+					<i class="far fa-pause-circle"></i>
+				</div>
+				<div class="buttons playpause" id="play" onclick="document.getElementById('audio').play()">
+				<i class="far fa-play-circle"></i>
+				</div>
+
+				<div id="text-holder"><p id="song"></p></div>
+
+				<div class="buttons" id="next">
+					<i class="far fa-step-forward"></i>
+				</div>
+			</div>
+
+				<div id="radio-body">
+
+					<div class="speakers">
+							<i class="fas fa-music"></i>
+					</div>
+					<div id="volume-buttons">
+						<i id="volumeup" class="fas fa-volume-up"></i>
+						<i id="volumedown" class="fas fa-volume-down"></i>
+					</div>
+					<div class="speakers">
+						<i class="fas fa-music"></i>
+						</div>
+					</div>
+
+				</div>
+		</div>
+</div>
+</body>
+<!-- Add jQuery link before js link -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+<script type="text/javascript" src="js/main.js"></script>
+</html>
