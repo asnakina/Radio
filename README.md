@@ -2,7 +2,7 @@
 ### Front-End Construction
 The front-end for this project is constructed with JavaScript, jQuery, HTML and CSS.
 
-## The link to this deployed project via Netlify https://loving-wing-6933f6.netlify.com
+## The link to this deployed project via Netlify https://radio-station.netlify.com/
 
 ![Printscreen 1](/images/printscreen1.jpg)
 

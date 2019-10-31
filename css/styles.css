@@ -4,7 +4,7 @@
 }
 
 #header {
-	background: url('../images/radiobkg3.jpg')100%;
+	background: url('../images/radiobkg3.jpg') 100%;
 	background-size: cover;
 	height: 200px;
 	opacity: 0.6;
