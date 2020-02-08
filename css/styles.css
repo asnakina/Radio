@@ -1,10 +1,15 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
 }
 
 #header {
-	background: url('../images/radiobkg3.jpg') 100%;
+	background: url('../images/radiobkg3.jpg')100%;
 	background-size: cover;
 	height: 200px;
 	opacity: 0.6;
@@ -24,11 +29,11 @@ h1 {
 }
 
 #container {
-	height: 700px;
+	height: 100vh;
 	border: solid black;
 	background: url('../images/radiobkg.jpg')100%;
 	background-size: cover;
-	/* opacity: 0.8; */
+	background-position: center;
 }
 
 #radio-container {
@@ -76,7 +81,6 @@ h1 {
 
 .far {
 	font-size: 70px;
-	/* padding: 15px; */
 	cursor: pointer;
 	color: white;
 }
@@ -118,19 +122,19 @@ h1 {
 }
 
 #radio-body {
-	height: 300px;
-	display: flex;
-	justify-content: space-around;
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .speakers {
- width: 250px;
- height: 250px;
- border-radius: 50%;
- margin-top: 20px;
- border: solid white;
- display: flex;
- justify-content: center;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-top: 20px;
+  border: solid white;
+  display: flex;
+  justify-content: center;
 }
 
 #volume-buttons {
@@ -143,20 +147,19 @@ h1 {
 	cursor: pointer;
 	color: white;
 	font-size: 100px;
-	/* margin-top: 30px; */
 }
 
 .fa-music {
 	margin-top: 70px;
 }
-        /* Animation */
+                               /* Animation */
 .music-notes {
   position: absolute;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
-	overflow: hidden;
+  overflow: hidden;
 }
 .music-notes div {
   position: absolute;
@@ -170,8 +173,8 @@ h1 {
 .music-notes div:nth-child(2) {
   left: 15%;
   animation: fallingNotes 20s linear;
-    animation-delay: -8s;
-    color: lightcoral;
+  animation-delay: -8s;
+  color: lightcoral;
 }
 .music-notes div:nth-child(3) {
   left: 30%;
@@ -199,8 +202,8 @@ h1 {
   animation-delay: -5s;
 }
 .round2 {
-	transform: translateY(-300px) scale(0.7) rotateY(180deg);
-	filter: blur(0.5px);
+  transform: translateY(-300px) scale(0.7) rotateY(180deg);
+  filter: blur(0.5px);
 }
 
 @keyframes fallingNotes {
@@ -229,3 +232,8 @@ h1 {
     transform: translateX(10px) rotate(230deg);
   }
 }
+
+
+
+
+
